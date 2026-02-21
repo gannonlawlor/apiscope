@@ -23,7 +23,7 @@ const SKILLS_DIR = getArg('skills-dir', '/opt/OpenClaw/.openclaw/skills');
 
 if ((!DOMAIN && !CAPTURE_FILE) || hasFlag('help')) {
   console.error(`Usage: generate-api-skill.js --domain <domain> [options]
-  --domain <d>        Domain to generate skill for (e.g., freshdirect.com)
+  --domain <d>        Domain to generate skill for (e.g., example.com)
   --capture <file>    Specific capture file (default: most recent for domain)
   --name <n>          Skill name (default: api-<domain-prefix>)
   --captures-dir <d>  Captures directory (default: /opt/OpenClaw/.openclaw/captures)

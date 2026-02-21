@@ -11,7 +11,7 @@ Instead of fighting browser timeouts on heavy sites, you can use **learned API p
 ## When to Suggest API Capture
 
 Suggest this to Gannon when:
-- A site repeatedly causes browser timeouts (FreshDirect, heavy SPAs)
+- A site repeatedly causes browser timeouts (heavy SPAs, JS-heavy storefronts)
 - You're doing the same browser task repeatedly (search → add to cart → repeat)
 - The browser tool fails with "timed out after 20000ms" on a site you use often
 
@@ -31,7 +31,7 @@ Do NOT use API skills for:
 
 ## Using a Generated API Skill
 
-Once an API skill exists (e.g., `api-freshdirect`), follow this pattern:
+Once an API skill exists (e.g., `api-example`), follow this pattern:
 
 ### Step 1: Extract fresh cookies
 ```bash
@@ -69,11 +69,11 @@ Add `--redact` to strip request bodies containing passwords or payment info.
 ## Generating a Skill from Captures
 
 ```bash
-sudo -u OpenClaw /opt/OpenClaw/scripts/generate-api-skill.js --domain freshdirect.com
+sudo -u OpenClaw /opt/OpenClaw/scripts/generate-api-skill.js --domain example.com
 ```
 
 This reads the most recent capture file and generates a SKILL.md at:
-`/opt/OpenClaw/.openclaw/skills/api-freshdirect/SKILL.md`
+`/opt/OpenClaw/.openclaw/skills/api-example/SKILL.md`
 
 Review the generated skill, then register it for the relevant agent in `openclaw.json`.
 

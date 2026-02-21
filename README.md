@@ -25,11 +25,11 @@ Replaces flaky browser automation with direct `curl` calls by learning a site's 
 bin/capture.js --port 9222 --duration 300
 
 # Generate an API skill from captured traffic
-bin/generate-skill.js --domain freshdirect.com
+bin/generate-skill.js --domain example.com
 
 # Extract fresh cookies for curl calls
-COOKIES=$(bin/extract-cookies.js --domain freshdirect.com --port 9222)
-curl -s 'https://www.freshdirect.com/api/search?q=spinach' -H "Cookie: $COOKIES"
+COOKIES=$(bin/extract-cookies.js --domain example.com --port 9222)
+curl -s 'https://www.example.com/api/search?q=test' -H "Cookie: $COOKIES"
 ```
 
 ## OpenClaw integration

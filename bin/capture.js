@@ -99,7 +99,7 @@ function getDomain(url) {
   try {
     const hostname = new URL(url).hostname;
     const parts = hostname.split('.');
-    // Return last two parts (e.g., freshdirect.com)
+    // Return last two parts (e.g., example.com)
     return parts.length > 2 ? parts.slice(-2).join('.') : hostname;
   } catch {
     return 'unknown';

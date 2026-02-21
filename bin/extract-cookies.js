@@ -22,7 +22,7 @@ const CDP_PORT = parseInt(getArg('port', '9222'), 10);
 
 if (!DOMAIN || hasFlag('help')) {
   console.error(`Usage: extract-cookies.js --domain <domain> [--port <n>]
-  --domain <d>   Domain to extract cookies for (e.g., freshdirect.com)
+  --domain <d>   Domain to extract cookies for (e.g., example.com)
   --port <n>     CDP port (default: 9222)
   --help         Show this help`);
   process.exit(hasFlag('help') ? 0 : 1);
