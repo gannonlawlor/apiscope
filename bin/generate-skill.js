@@ -371,7 +371,7 @@ function main() {
   lines.push('1. Re-extract cookies using the command above');
   lines.push('2. If still failing, the site may have changed its auth mechanism');
   lines.push('3. Fall back to using the `browser` tool');
-  lines.push('4. Report to Gannon that the API skill needs re-capture');
+  lines.push('4. Report to the operator that the API skill needs re-capture');
   lines.push('');
   lines.push('## Re-capture');
   lines.push('');

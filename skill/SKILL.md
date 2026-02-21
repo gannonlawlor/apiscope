@@ -10,7 +10,7 @@ Instead of fighting browser timeouts on heavy sites, you can use **learned API p
 
 ## When to Suggest API Capture
 
-Suggest this to Gannon when:
+Suggest this to the operator when:
 - A site repeatedly causes browser timeouts (heavy SPAs, JS-heavy storefronts)
 - You're doing the same browser task repeatedly (search → add to cart → repeat)
 - The browser tool fails with "timed out after 20000ms" on a site you use often
@@ -18,12 +18,12 @@ Suggest this to Gannon when:
 Do NOT use API skills for:
 - First visits to a new site (need to discover the workflow first)
 - CAPTCHA or bot-detection flows
-- Checkout / payment flows (Gannon handles these manually)
+- Checkout / payment flows (the operator handles these manually)
 - Sites where you need to see visual layout (e.g., comparing product images)
 
 ## How API Learning Works
 
-1. **Gannon starts a capture** on the relevant VNC browser port
+1. **The operator starts a capture** on the relevant VNC browser port
 2. **Normal browsing happens** — manually or via the browser tool
 3. **Capture script records** all XHR/Fetch API calls passively
 4. **Generator analyzes** the traffic and produces a SKILL.md with endpoint docs
@@ -48,10 +48,10 @@ curl -s 'https://www.example.com/api/search?q=spinach' \
 
 ### Step 3: Handle failures
 - **401/403:** Cookies expired. Re-extract and retry.
-- **Changed responses:** API may have been updated. Tell Gannon to re-capture.
-- **Unexpected errors:** Fall back to the `browser` tool. Report to Gannon.
+- **Changed responses:** API may have been updated. Tell the operator to re-capture.
+- **Unexpected errors:** Fall back to the `browser` tool. Report to the operator.
 
-## Starting a New Capture (For Gannon)
+## Starting a New Capture (For the Operator)
 
 To capture traffic from a site:
 ```bash
